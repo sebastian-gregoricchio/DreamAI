@@ -131,6 +131,7 @@ returnTestSet<-function(col,filled,test_indices){
 #' @param fillmethod a string identifying the method to be used that could be "row_mean" or "zeros", with "row_mean" being the default. It throws an warning if "row_median" is used.
 #' @param maxiter_RegImpute a integer identifying maximum number of iterations to reach convergence
 #' @return the imputed version of the dataset
+#' @import glmnet
 #' @export
 #' @examples
 #' \dontrun{
@@ -191,4 +192,5 @@ impute.RegImpute <- function(data,fillmethod,maxiter_RegImpute,conv_nrmse){
   }
   return(filled)
 }
+
 
